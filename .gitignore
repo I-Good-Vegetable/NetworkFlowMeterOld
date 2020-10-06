@@ -2,6 +2,8 @@
 # Data/
 # Test.py
 Test*.py
+*.pcap
+*.pcapng
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
