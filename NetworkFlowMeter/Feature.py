@@ -1,7 +1,7 @@
 from pyprobar import probar
-from .Settings import progressBarColor
-from .NetworkTyping import AnyStr, List, Tuple, Flows, Features, FeatureSet
-from .Flow import Flow
+from NetworkFlowMeter.Settings import progressBarColor
+from NetworkFlowMeter.NetworkTyping import AnyStr, List, Tuple, Flows, Features, FeatureSet
+from NetworkFlowMeter.Flow import Flow
 
 
 class FeatureExtractor(object):
@@ -11,7 +11,8 @@ class FeatureExtractor(object):
         """
         This supper class method must be invoked at the end of sub-class init function
         """
-        FeatureExtractor.extractors.append(self)
+        if self not in FeatureExtractor.extractors:
+            FeatureExtractor.extractors.append(self)
         self.featureNames = list(self.extract(Flow('EMPTY 0 0 0 0')).keys())
 
     @staticmethod

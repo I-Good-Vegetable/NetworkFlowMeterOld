@@ -1,2 +1,2 @@
-from .BasicFlowInfo import *
-from .MacAddrInfo import *
+from NetworkFlowMeter.BuiltinFeatureExtractors.BasicFlowInfo import *
+from NetworkFlowMeter.BuiltinFeatureExtractors.MacAddrInfo import *

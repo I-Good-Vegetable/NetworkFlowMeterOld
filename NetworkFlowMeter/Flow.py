@@ -1,8 +1,8 @@
 from pyprobar import probar
-from .Settings import progressBarColor
-from .NetworkTyping import Callable, Optional, AnyStr, Packet, Sessions, SessionKeyInfo, Flows
-from .Session import defaultSessionKeyInfo
-from .Utils import packetTsMicroseconds, formatMicrosecond
+from NetworkFlowMeter.Settings import progressBarColor
+from NetworkFlowMeter.NetworkTyping import Callable, Optional, AnyStr, Packet, Sessions, SessionKeyInfo, Flows
+from NetworkFlowMeter.Session import defaultSessionKeyInfo
+from NetworkFlowMeter.Utils import packetTsMicroseconds, formatMicrosecond
 
 
 class Flow(object):

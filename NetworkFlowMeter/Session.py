@@ -1,7 +1,7 @@
 from collections import defaultdict
 from pyprobar import probar
-from .Settings import progressBarColor
-from .NetworkTyping import Optional, Callable, Any, AnyStr, List, Tuple, Packet, Sessions, SessionKeyInfo
+from NetworkFlowMeter.Settings import progressBarColor
+from NetworkFlowMeter.NetworkTyping import Optional, Callable, Any, AnyStr, List, Tuple, Packet, Sessions, SessionKeyInfo
 
 
 def directionalField(field1: Any, field2: Any) -> (Any, Any, AnyStr):

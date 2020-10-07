@@ -1,10 +1,11 @@
 # avoid upload or download too much useless files
 Data/
 Backups/
-# Test.py
-#Test*.py
+# Main.py
+Test*.py
 *.pcap
 *.pcapng
+*.csv
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template

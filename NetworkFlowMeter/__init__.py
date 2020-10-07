@@ -1,10 +1,11 @@
-from .TicToc import *
+from NetworkFlowMeter.TicToc import *
 
-# from .NetworkTyping import *
-# from .IO import *
-# from .Utils import *
-# from .Session import *
-# from .Flow import *
-# from .Feature import *
-# from .BuiltinFeatureExtractors import *
-from .Comprehensive import *
+# from NetworkFlowMeter.NetworkTyping import *
+# from NetworkFlowMeter.IO import *
+# from NetworkFlowMeter.Utils import *
+# from NetworkFlowMeter.Session import *
+# from NetworkFlowMeter.Flow import *
+# from NetworkFlowMeter.Feature import *
+# from NetworkFlowMeter.BuiltinFeatureExtractors import *
+from NetworkFlowMeter.Comprehensive import *
+

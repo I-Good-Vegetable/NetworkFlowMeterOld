@@ -1,6 +1,6 @@
 import csv
 from pyshark import FileCapture
-from .NetworkTyping import List, Packet, FeatureSet
+from NetworkFlowMeter.NetworkTyping import List, Packet, FeatureSet
 
 
 # Input

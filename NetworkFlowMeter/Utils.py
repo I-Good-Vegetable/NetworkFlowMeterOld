@@ -1,6 +1,6 @@
 import time
 
-from .NetworkTyping import AnyStr, Packet
+from NetworkFlowMeter.NetworkTyping import AnyStr, Packet
 
 
 def second2microsecond(t) -> float:
