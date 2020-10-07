@@ -1,7 +1,8 @@
 # avoid upload or download too much useless files
-# Data/
+Data/
+Backups/
 # Test.py
-Test*.py
+#Test*.py
 *.pcap
 *.pcapng
 
