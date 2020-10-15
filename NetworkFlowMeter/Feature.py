@@ -65,12 +65,12 @@ def addMathChar2Dict(d: dict, baseName: Optional[str], numList: Collection[Any],
     d[f'{baseName}Min'] = defaultValue
     d[f'{baseName}Max'] = defaultValue
     d[f'{baseName}Sum'] = defaultValue
-    d[f'{baseName}Mean'] = defaultValue
+    d[f'{baseName}Ave'] = defaultValue
     if len(numList) >= 1:
         d[f'{baseName}Min'] = min(numList)
         d[f'{baseName}Max'] = max(numList)
         d[f'{baseName}Sum'] = sum(numList)
-        d[f'{baseName}Mean'] = statistics.mean(numList)
+        d[f'{baseName}Ave'] = statistics.mean(numList)
 
     d[f'{baseName}Std'] = defaultValue
     if len(numList) >= 2:
