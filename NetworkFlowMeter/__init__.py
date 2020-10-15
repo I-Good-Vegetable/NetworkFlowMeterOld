@@ -8,4 +8,5 @@ from NetworkFlowMeter.TicToc import *
 # from NetworkFlowMeter.Feature import *
 # from NetworkFlowMeter.BuiltinFeatureExtractors import *
 from NetworkFlowMeter.Comprehensive import *
+from NetworkFlowMeter.BuiltinFeatureExtractors import *
 

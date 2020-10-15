@@ -1,6 +1,6 @@
-from ..Feature import FeatureExtractor
-from ..Flow import Flow
-from ..NetworkTyping import FeatureSet, Features
+from NetworkFlowMeter.Feature import FeatureExtractor
+from NetworkFlowMeter.Flow import Flow
+from NetworkFlowMeter.NetworkTyping import FeatureSet, Features
 
 
 class BasicFlowInfo(FeatureExtractor):

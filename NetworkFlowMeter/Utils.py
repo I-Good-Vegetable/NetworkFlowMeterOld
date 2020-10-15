@@ -1,14 +1,17 @@
 import time
 
-from NetworkFlowMeter.NetworkTyping import AnyStr, Packet
+import pandas as pd
+
+from NetworkFlowMeter.NetworkTyping import AnyStr
+from NetworkFlowMeter.NetworkTyping import Packet, FeatureSet, DataFrame
 
 
 def second2microsecond(t) -> float:
-    return t * 1000000
+    return t * 1000000.0
 
 
 def microsecond2second(t) -> float:
-    return t / 1000000
+    return t / 1000000.0
 
 
 def formatMicrosecond(t) -> AnyStr:
@@ -19,3 +22,7 @@ def formatMicrosecond(t) -> AnyStr:
 
 def packetTsMicroseconds(packet: Packet) -> float:
     return second2microsecond(float(packet.sniff_timestamp))
+
+
+def featureSet2dataframe(featureSet: FeatureSet) -> DataFrame:
+    return pd.DataFrame(featureSet)

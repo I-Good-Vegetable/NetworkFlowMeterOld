@@ -4,8 +4,8 @@ from NetworkFlowMeter import *
 
 @timing
 def main():
-    pcapPath = 'Data/filtered.pcap'
-    csvFile = 'Data/filtered.csv'
+    pcapPath = 'Data/Test.pcap'
+    csvFile = 'Data/Test.csv'
     pcap2csv(pcapPath)
     pass
 

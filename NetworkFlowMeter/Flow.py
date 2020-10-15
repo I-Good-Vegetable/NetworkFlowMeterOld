@@ -1,8 +1,10 @@
 from pyprobar import probar
-from NetworkFlowMeter.Settings import progressBarColor
-from NetworkFlowMeter.NetworkTyping import Callable, Optional, AnyStr, Packet, Sessions, SessionKeyInfo, Flows
+
+from NetworkFlowMeter.NetworkTyping import Callable, Optional, AnyStr, Packet, Sessions, SessionKeyInfo, PacketList, \
+    Flows
 from NetworkFlowMeter.Session import defaultSessionKeyInfo
-from NetworkFlowMeter.Utils import packetTsMicroseconds, formatMicrosecond
+from NetworkFlowMeter.Settings import progressBarColor
+from NetworkFlowMeter.Utils import packetTsMicroseconds, formatMicrosecond, microsecond2second
 
 
 class Flow(object):
@@ -22,10 +24,10 @@ class Flow(object):
         self.initialPacketTs = 0
         self.lastPacketTs = 0
         # bidirectional packets
-        self.packets = list()
+        self.packets: PacketList = list()
         # unidirectional packets
-        self.forwardPackets = list()
-        self.backwardPackets = list()
+        self.forwardPackets: PacketList = list()
+        self.backwardPackets: PacketList = list()
         # no need to add label now. it can be added later on
         self.label = ''
 
@@ -70,9 +72,14 @@ class Flow(object):
     def readableLastPacketTs(self) -> AnyStr:
         return formatMicrosecond(self.lastPacketTs)
 
-    def duration(self) -> float:
-        """microsecond"""
-        return self.lastPacketTs - self.initialPacketTs
+    def duration(self, f='ms') -> float:
+        """
+        ms: microsecond
+        s: second
+        """
+        if f == 's':
+            return microsecond2second(self.lastPacketTs - self.initialPacketTs)
+        return float(self.lastPacketTs - self.initialPacketTs)
 
     def empty(self) -> bool:
         return len(self.packets) == 0

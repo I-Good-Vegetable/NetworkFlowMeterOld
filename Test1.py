@@ -3,6 +3,7 @@ import time
 from NetworkFlowMeter.TicToc import timing
 from rich.progress import track
 from rich.console import Console
+from NetworkFlowMeter.Utils import addMathChar2Dict
 
 console = Console()
 
@@ -24,8 +25,13 @@ def main():
     }
     print(d.keys())
 
-    for step in track(range(100), console=console):
-        time.sleep(1)
+    # for step in track(range(100), console=console):
+    #     time.sleep(1)
+
+    l = [1.1]
+    d = dict(test1=10)
+    addMathChar2Dict(d, 'test', l)
+    print(d)
     pass
 
 

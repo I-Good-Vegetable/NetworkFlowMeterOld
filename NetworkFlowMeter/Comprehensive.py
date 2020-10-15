@@ -1,7 +1,7 @@
 from pathlib import Path
 from pyprobar import probar
 
-from NetworkFlowMeter.BuiltinFeatureExtractors import sortFeatures
+from NetworkFlowMeter.BuiltinFeatureExtractors.BasicFlowInfo import sortFeatures
 from NetworkFlowMeter.Settings import progressBarColor
 from NetworkFlowMeter.IO import readPackets, featureSet2csv
 from NetworkFlowMeter.TicToc import Timer

@@ -1,6 +1,6 @@
-from ..NetworkTyping import Features
-from ..Flow import Flow
-from ..Feature import FeatureExtractor
+from NetworkFlowMeter.NetworkTyping import Features
+from NetworkFlowMeter.Flow import Flow
+from NetworkFlowMeter.Feature import FeatureExtractor
 
 
 class MacAddrInfo(FeatureExtractor):
