@@ -52,8 +52,8 @@ Feature Name				Description
 - [ ] URG Flag Count 			Number of packets with URG
 - [ ] CWR Flag Count 			Number of packets with CWR
 - [ ] ECE Flag Count 			Number of packets with ECE
-- [ ] down/Up Ratio			Download and upload ratio
-- [ ] Average Packet Size 		Average size of packet
+- [x] down/Up Ratio			Download and upload ratio
+- [x] Average Packet Size 		Average size of packet
 - [ ] Fwd Segment Size Avg 		Average size observed in the forward direction
 - [ ] Bwd Segment Size Avg 		Average number of bytes bulk rate in the backward direction
 - [ ] Fwd Bytes/Bulk Avg		Average number of bytes bulk rate in the forward direction

@@ -126,8 +126,8 @@ def addBidirFlowCountSpeed2features(d: Features, flow: Flow, baseName: str,
         fwdSpeed, bwdSpeed, flowSpeed = 0, 0, 0
     else:
         fwdSpeed, bwdSpeed, flowSpeed = fwdCount / duration, bwdCount / duration, flowCount / duration
-    d[f'Fwd {baseName} Num'], d[f'Bwd {baseName} Num'], d[f'Flow {baseName} Num'] =\
-        fwdCount, bwdCount, flowCount
+    d[f'Fwd {baseName} Num'], d[f'Bwd {baseName} Num'], d[f'Flow {baseName} Num'], d[f'F/Bwd {baseName} Num Ratio'] =\
+        fwdCount, bwdCount, flowCount, fwdCount / bwdCount if bwdCount != 0 else 0
     d[f'Fwd {baseName} Speed'], d[f'Bwd {baseName} Speed'], d[f'Flow {baseName} Speed'] =\
         fwdSpeed, bwdSpeed, flowSpeed
     return d
