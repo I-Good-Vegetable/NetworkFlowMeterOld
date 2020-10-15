@@ -1,6 +1,6 @@
 from NetworkFlowMeter.Feature import FeatureExtractor, addBidirFlowMathChar2Features, addBidirFlowCountSpeed2features
 from NetworkFlowMeter.Flow import Flow
-from NetworkFlowMeter.NetworkTyping import Features, PacketList
+from NetworkFlowMeter.NetworkTyping import Features
 
 
 class PacketCounter(FeatureExtractor):

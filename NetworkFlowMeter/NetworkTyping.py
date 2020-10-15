@@ -1,6 +1,7 @@
-from typing import Callable, Optional, Collection, AnyStr, Any, List, Tuple, Dict, DefaultDict
 from pyshark.packet.packet import Packet
 from pandas import DataFrame
+
+from typing import Callable, Optional, Collection, AnyStr, Any, List, Tuple, Dict, DefaultDict
 
 
 PacketList = List[Packet]
