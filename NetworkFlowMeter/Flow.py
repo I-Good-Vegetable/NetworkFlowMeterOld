@@ -66,6 +66,9 @@ class Flow(object):
     def __len__(self):
         return len(self.packets)
 
+    def protocol(self):
+        return self.sessionKeyInfo[0]
+
     def readableInitPacketTs(self) -> AnyStr:
         return formatMicrosecond(self.initialPacketTs)
 

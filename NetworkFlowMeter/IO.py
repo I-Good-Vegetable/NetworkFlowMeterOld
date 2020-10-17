@@ -1,20 +1,32 @@
 import csv
+import pickle
 
 from pyshark import FileCapture
 
-from NetworkFlowMeter.NetworkTyping import List, Packet, FeatureSet
+from NetworkFlowMeter.NetworkTyping import PacketList, FeatureSet
 
 
 # Input
 
 
-def readPackets(filepath) -> List[Packet]:
+def readPackets(filepath) -> PacketList:
     fileCapture = FileCapture(str(filepath))
     packets = [p for p in fileCapture]
     return packets
 
 
+def readPacketsFromPkl(filepath) -> PacketList:
+    with open(filepath, 'rb') as pklFile:
+        packetList = pickle.load(pklFile)
+    return packetList
+
+
 # Output
+
+
+def savePackets2pkl(filepath, packetList: PacketList):
+    with open(filepath, 'wb') as pklFile:
+        pickle.dump(packetList, pklFile)
 
 
 def featureSet2csv(filepath: str, featureSet: FeatureSet):

@@ -75,8 +75,8 @@ def pcap2csv(pcapPath=None, csvPath=None, direction: AnyStr = 'bidirectional',
     pcapPath = Path(pcapPath)
     if csvPath is None:
         csvPath = pcapPath.with_suffix('.csv')
-    print(f'{len(FeatureExtractor.extractors)} Feature Extractors Will Be Invoked: ')
-    FeatureExtractor.existingExtractors()
+    print(f'{len(FeatureExtractor.extractors)} Feature Extractors are Invoked: ')
+    FeatureExtractor.printExistingExtractors()
     with Timer(f'{pcapPath} Resolved'):
         print(f'Resolving {pcapPath}')
         packets = readPackets(pcapPath)

@@ -12,15 +12,18 @@ class BasicFlowInfo(FeatureExtractor):
         protocol, srcIp, srcPort, dstIp, dstPort = flow.sessionKeyInfo
         features = {
             'Session Key': flow.sessionKey,
+            'Protocol': protocol,
             'Src IP': srcIp,
             'Src Port': srcPort,
             'Dst IP': dstIp,
             'Dst Port': dstPort,
-            'Protocol': protocol,
             'Init Ts': flow.readableInitPacketTs(),
             'Last Ts': flow.readableLastPacketTs(),
             'Ts': flow.initialPacketTs,
             'Duration': flow.duration(),
+            # This Label is only a Placeholder
+            # It can be manually labeled or create another feature extractor to generate labels
+            'Label': ''
         }
         return features
 

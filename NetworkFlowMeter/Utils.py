@@ -24,5 +24,9 @@ def packetTsMicroseconds(packet: Packet) -> float:
     return second2microsecond(float(packet.sniff_timestamp))
 
 
+def packetTs(packet: Packet) -> float:
+    return float(packet.sniff_timestamp)
+
+
 def featureSet2dataframe(featureSet: FeatureSet) -> DataFrame:
     return pd.DataFrame(featureSet)

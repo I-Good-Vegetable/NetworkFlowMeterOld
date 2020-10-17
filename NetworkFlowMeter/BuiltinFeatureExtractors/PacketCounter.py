@@ -14,6 +14,7 @@ class PacketCounter(FeatureExtractor):
         addBidirFlowCountSpeed2features(features, flow, 'Pkt', len)
         addBidirFlowCountSpeed2features(features, flow, 'Byte',
                                         lambda pl: sum(float(p.frame_info.len) for p in pl))
+
         return features
 
 

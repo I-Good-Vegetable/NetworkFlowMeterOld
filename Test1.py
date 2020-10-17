@@ -1,9 +1,10 @@
 import time
+from typing import get_type_hints
 
 from NetworkFlowMeter.TicToc import timing
 from rich.progress import track
 from rich.console import Console
-from NetworkFlowMeter.Utils import addMathChar2Dict
+from NetworkFlowMeter.Feature import addMathChar2Dict
 
 console = Console()
 
@@ -32,6 +33,10 @@ def main():
     d = dict(test1=10)
     addMathChar2Dict(d, 'test', l)
     print(d)
+
+    l1 = []
+    l2 = [l1[i] - l1[i - 1] for i in range(1, len(l1))]
+    print(l2)
     pass
 
 

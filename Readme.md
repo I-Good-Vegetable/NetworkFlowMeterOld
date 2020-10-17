@@ -15,45 +15,45 @@ Feature Name				Description
 - [x] Bwd Packet Length Max		Maximum size of packet in backward direction
 - [x] Bwd Packet Length Mean		Mean size of packet in backward direction
 - [x] Bwd Packet Length Std		Standard deviation size of packet in backward direction
-- [ ] Flow Bytes/s			Number of flow bytes per second
-- [ ] Flow Packets/s			Number of flow packets per second 
-- [ ] Flow IAT Mean			Mean time between two packets sent in the flow
-- [ ] Flow IAT Std			Standard deviation time between two packets sent in the flow
-- [ ] Flow IAT Max			Maximum time between two packets sent in the flow
-- [ ] Flow IAT Min			Minimum time between two packets sent in the flow
-- [ ] Fwd IAT Min			Minimum time between two packets sent in the forward direction
-- [ ] Fwd IAT Max			Maximum time between two packets sent in the forward direction
-- [ ] Fwd IAT Mean			Mean time between two packets sent in the forward direction
-- [ ] Fwd IAT Std			Standard deviation time between two packets sent in the forward direction
-- [ ] Fwd IAT Total   		Total time between two packets sent in the forward direction
-- [ ] Bwd IAT Min			Minimum time between two packets sent in the backward direction
-- [ ] Bwd IAT Max			Maximum time between two packets sent in the backward direction
-- [ ] Bwd IAT Mean			Mean time between two packets sent in the backward direction
-- [ ] Bwd IAT Std			Standard deviation time between two packets sent in the backward direction
+- [x] Flow Bytes/s			Number of flow bytes per second
+- [x] Flow Packets/s			Number of flow packets per second 
+- [x] Flow IAT Mean			Mean time between two packets sent in the flow
+- [x] Flow IAT Std			Standard deviation time between two packets sent in the flow
+- [x] Flow IAT Max			Maximum time between two packets sent in the flow
+- [x] Flow IAT Min			Minimum time between two packets sent in the flow
+- [x] Fwd IAT Min			Minimum time between two packets sent in the forward direction
+- [x] Fwd IAT Max			Maximum time between two packets sent in the forward direction
+- [x] Fwd IAT Mean			Mean time between two packets sent in the forward direction
+- [x] Fwd IAT Std			Standard deviation time between two packets sent in the forward direction
+- [x] Fwd IAT Total   		Total time between two packets sent in the forward direction
+- [x] Bwd IAT Min			Minimum time between two packets sent in the backward direction
+- [x] Bwd IAT Max			Maximum time between two packets sent in the backward direction
+- [x] Bwd IAT Mean			Mean time between two packets sent in the backward direction
+- [x] Bwd IAT Std			Standard deviation time between two packets sent in the backward direction
 - [ ] Bwd IAT Total			Total time between two packets sent in the backward direction
-- [ ] Fwd PSH flags			Number of times the PSH flag was set in packets travelling in the forward direction (0 for UDP)
-- [ ] Bwd PSH Flags			Number of times the PSH flag was set in packets travelling in the backward direction (0 for UDP)
-- [ ] Fwd URG Flags			Number of times the URG flag was set in packets travelling in the forward direction (0 for UDP)
-- [ ] Bwd URG Flags			Number of times the URG flag was set in packets travelling in the backward direction (0 for UDP)
-- [ ] Fwd Header Length		Total bytes used for headers in the forward direction
-- [ ] Bwd Header Length		Total bytes used for headers in the backward direction
-- [ ] FWD Packets/s			Number of forward packets per second
-- [ ] Bwd Packets/s			Number of backward packets per second
-- [ ] Packet Length Min 		Minimum length of a packet
-- [ ] Packet Length Max		Maximum length of a packet
-- [ ] Packet Length Mean 		Mean length of a packet
-- [ ] Packet Length Std		Standard deviation length of a packet
-- [ ] Packet Length Variance  	Variance length of a packet
-- [ ] FIN Flag Count 			Number of packets with FIN
-- [ ] SYN Flag Count 			Number of packets with SYN
-- [ ] RST Flag Count 			Number of packets with RST
-- [ ] PSH Flag Count 			Number of packets with PUSH
-- [ ] ACK Flag Count 			Number of packets with ACK
-- [ ] URG Flag Count 			Number of packets with URG
-- [ ] CWR Flag Count 			Number of packets with CWR
-- [ ] ECE Flag Count 			Number of packets with ECE
-- [ ] down/Up Ratio			Download and upload ratio
-- [ ] Average Packet Size 		Average size of packet
+- [x] Fwd PSH flags			Number of times the PSH flag was set in packets travelling in the forward direction (0 for UDP)
+- [x] Bwd PSH Flags			Number of times the PSH flag was set in packets travelling in the backward direction (0 for UDP)
+- [x] Fwd URG Flags			Number of times the URG flag was set in packets travelling in the forward direction (0 for UDP)
+- [x] Bwd URG Flags			Number of times the URG flag was set in packets travelling in the backward direction (0 for UDP)
+- [x] Fwd Header Length		Total bytes used for headers in the forward direction
+- [x] Bwd Header Length		Total bytes used for headers in the backward direction
+- [x] FWD Packets/s			Number of forward packets per second
+- [x] Bwd Packets/s			Number of backward packets per second
+- [x] Packet Length Min 		Minimum length of a packet
+- [x] Packet Length Max		Maximum length of a packet
+- [x] Packet Length Mean 		Mean length of a packet
+- [x] Packet Length Std		Standard deviation length of a packet
+- [x] Packet Length Variance  	Variance length of a packet
+- [x] FIN Flag Count 			Number of packets with FIN
+- [x] SYN Flag Count 			Number of packets with SYN
+- [x] RST Flag Count 			Number of packets with RST
+- [x] PSH Flag Count 			Number of packets with PUSH
+- [x] ACK Flag Count 			Number of packets with ACK
+- [x] URG Flag Count 			Number of packets with URG
+- [x] CWR Flag Count 			Number of packets with CWR
+- [x] ECE Flag Count 			Number of packets with ECE
+- [x] down/Up Ratio			Download and upload ratio
+- [x] Average Packet Size 		Average size of packet
 - [ ] Fwd Segment Size Avg 		Average size observed in the forward direction
 - [ ] Bwd Segment Size Avg 		Average number of bytes bulk rate in the backward direction
 - [ ] Fwd Bytes/Bulk Avg		Average number of bytes bulk rate in the forward direction
