@@ -1,7 +1,7 @@
 from pathlib import Path
 from pyprobar import probar
 
-from NetworkFlowMeter.BuiltinFeatureExtractors.BasicFlowInfo import sortFeatures
+from NetworkFlowMeter.BuiltinFeatureExtractors.Bfe1BasicFlowInfo import sortFeatures
 from NetworkFlowMeter.Settings import progressBarColor
 from NetworkFlowMeter.IO import readPackets, featureSet2csv
 from NetworkFlowMeter.TicToc import Timer
@@ -13,8 +13,8 @@ from NetworkFlowMeter.NetworkTyping import Callable, Optional, AnyStr, List, Tup
 
 def packets2features(packets: List[Packet], direction: AnyStr = 'bidirectional',
                      sessionExtractor: Optional[Callable[[Packet], Tuple[AnyStr, AnyStr]]] = None,
-                     flowTimeout=Flow.flowTimeout,
-                     activityTimeout=Flow.activityTimeout) -> Tuple[FeatureSet, List[AnyStr]]:
+                     flowTimeout=Flow.defaultFlowTimeout,
+                     activityTimeout=Flow.defaultActivityTimeout) -> Tuple[FeatureSet, List[AnyStr]]:
     """
     Take packets as input generate features
     :param packets: A list of packets
@@ -26,7 +26,7 @@ def packets2features(packets: List[Packet], direction: AnyStr = 'bidirectional',
     """
     aliveFlows, flows = dict(), list()
     featureSet: FeatureSet = list()
-    Flow.flowTimeout, Flow.activityTimeout = flowTimeout, activityTimeout
+    Flow.defaultFlowTimeout, Flow.defaultActivityTimeout = flowTimeout, activityTimeout
     if sessionExtractor is None:
         # use bidirectional session extractor as default
         # unidirectional session key is the bidirectional session key + direction
@@ -56,8 +56,8 @@ def packets2features(packets: List[Packet], direction: AnyStr = 'bidirectional',
 
 def pcap2csv(pcapPath=None, csvPath=None, direction: AnyStr = 'bidirectional',
              sessionExtractor: Optional[Callable[[Packet], Tuple[AnyStr, AnyStr]]] = None,
-             flowTimeout=Flow.flowTimeout,
-             activityTimeout=Flow.activityTimeout):
+             flowTimeout=Flow.defaultFlowTimeout,
+             activityTimeout=Flow.defaultActivityTimeout):
     """
     Take PCAP/PCAPNG as input, and generate CSV file
     :param pcapPath: PCAP/PCAPNG file path; if it is None, user need to input the file path

@@ -12,14 +12,17 @@ class Flow(object):
     All time related operation will be based on microseconds
     """
     # default timeout setting
-    flowTimeout = 5000000
-    activityTimeout = 3000000
+    defaultFlowTimeout = 5000000
+    defaultActivityTimeout = 3000000
 
     def __init__(self, sessionKey: AnyStr,
                  packet: Optional[Packet] = None,
-                 sessionKeyInfoGenerator: Callable[[AnyStr], SessionKeyInfo] = defaultSessionKeyInfo):
+                 sessionKeyInfoGenerator: Callable[[AnyStr], SessionKeyInfo] = defaultSessionKeyInfo,
+                 flowTimeout: Optional[float] = None):
         self.sessionKey = sessionKey
+        self.sessionKeyInfoGenerator = sessionKeyInfoGenerator
         self.sessionKeyInfo = sessionKeyInfoGenerator(sessionKey)
+        self.flowTimeout = self.defaultFlowTimeout if flowTimeout is None else flowTimeout
         # packet ts => microseconds
         self.initialPacketTs = 0
         self.lastPacketTs = 0
@@ -95,8 +98,7 @@ class Flow(object):
         :return: True: timeout; False: the packet can be add into this flow
         """
         packetTs = packetTsMicroseconds(packet)
-        if packetTs - self.initialPacketTs > self.flowTimeout or \
-                packetTs - self.lastPacketTs > self.activityTimeout:
+        if packetTs - self.initialPacketTs > self.flowTimeout:
             return True
         return False
 
@@ -129,9 +131,11 @@ class Flow(object):
         return True
 
 
-def sessions2flows(sessions: Sessions, flowTimeout=Flow.flowTimeout, activityTimeout=Flow.activityTimeout) -> Flows:
+def sessions2flows(sessions: Sessions,
+                   flowTimeout=Flow.defaultFlowTimeout,
+                   activityTimeout=Flow.defaultActivityTimeout) -> Flows:
     aliveFlows, flows = dict(), list()
-    Flow.flowTimeout, Flow.activityTimeout = flowTimeout, activityTimeout
+    Flow.defaultFlowTimeout, Flow.defaultActivityTimeout = flowTimeout, activityTimeout
     # generate flows
     for sessionKey, session in probar(sessions.items(), color=progressBarColor):
         for p in session:

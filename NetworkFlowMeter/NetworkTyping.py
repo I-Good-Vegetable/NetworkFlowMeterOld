@@ -10,3 +10,6 @@ Sessions = DefaultDict[AnyStr, List[Packet]]
 Flows = List[Packet]
 Features = Dict[AnyStr, Any]
 FeatureSet = List[Features]
+
+AttackRecords = List[Dict[AnyStr, Any]]
+CompiledRecords = Dict[AnyStr, List[Tuple[Any, Any, AnyStr]]]

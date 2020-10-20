@@ -37,6 +37,17 @@ def main():
     l1 = []
     l2 = [l1[i] - l1[i - 1] for i in range(1, len(l1))]
     print(l2)
+    d1 = {
+        1: '222',
+        2: '333',
+        3: '444',
+    }
+    d2 = {
+        2: '222',
+        1: '111',
+    }
+    d1.update(d2)
+    print(d1, d2)
     pass
 
 

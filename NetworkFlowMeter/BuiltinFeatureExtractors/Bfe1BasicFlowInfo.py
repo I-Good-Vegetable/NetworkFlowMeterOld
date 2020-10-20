@@ -21,10 +21,20 @@ class BasicFlowInfo(FeatureExtractor):
             'Last Ts': flow.readableLastPacketTs(),
             'Ts': flow.initialPacketTs,
             'Duration': flow.duration(),
+            'Mac Addr': set(),
             # This Label is only a Placeholder
             # It can be manually labeled or create another feature extractor to generate labels
             'Label': ''
         }
+        for p in flow.packets:
+            if 'dst16' in p.wpan.field_names:
+                features['Mac Addr'].add(p.wpan.dst16)
+            if 'dst64' in p.wpan.field_names:
+                features['Mac Addr'].add(p.wpan.dst64)
+            if 'src16' in p.wpan.field_names:
+                features['Mac Addr'].add(p.wpan.src16)
+            if 'src64' in p.wpan.field_names:
+                features['Mac Addr'].add(p.wpan.src64)
         return features
 
 

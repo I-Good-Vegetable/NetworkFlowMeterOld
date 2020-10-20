@@ -2,7 +2,7 @@
 Data/
 Backups/
 # Main.py
-Test*.py
+Test*
 *.pcap
 *.pcapng
 *.csv
